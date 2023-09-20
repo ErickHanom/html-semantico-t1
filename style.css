@@ -4,6 +4,8 @@
     --cor-terciaria: #e4a041;
     --cor-quaternaria: #f4c277;
     --cor-fundo: #faf5e8;
+    --fonte-primaria: 'Times New Roman', serif;
+    --fonte-secundaria: Arial,Helvetica, sans-serif;
 }
 
 html {
@@ -14,6 +16,7 @@ body {
     margin: 20px 50px;
     text-align: justify;
     background-color: var(--cor-fundo);
+    font-family: var(--fonte-primária);
 }
 
 .titulo-de-pagina {
@@ -21,15 +24,7 @@ body {
     line-height: 2;
     font-weight: bold;
     font-size: 22pt;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.titulo-de-artigo {
-    color: var(--cor-secundaria);
-    line-height: 2;
-    font-weight: bold;
-    font-size: 18pt;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-secundaria);
 }
 
 .titulo-de-secao {
@@ -37,15 +32,22 @@ body {
     line-height: 1.8;
     font-weight: bold;
     font-size: 18pt;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-secundaria);
 }
 
+.titulo-de-artigo {
+    color: var(--cor-secundaria);
+    line-height: 2;
+    font-weight: bold;
+    font-size: 18pt;
+    font-family: var(--fonte-secundaria);
+}
 .subtitulo-de-artigo {
     color:var(--cor-terciaria);
     line-height: 1.5;
     font-weight: bold;
     font-size: 14pt;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-secundaria);
     font-style: italic;
     margin-bottom: 10px;
 }
@@ -55,6 +57,21 @@ p {
     line-height: 1.2;
 }
 
+/*Estilos do artigos*/
+
+section#artigos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+article {
+    border: 8px solid var(--cor-quaternaria);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 20px 0 20px 0;
+    width: 25%;
+}
 .paragrafo-de-artigo {
     background-color: var(--cor-quaternaria);
     padding: 20px;
@@ -76,13 +93,8 @@ p {
     border-radius: 20px 0 20px 0;
 }
 
-article {
-    border: 8px solid var(--cor-quaternaria);
-    padding: 30px;
-    margin: 30px 0;
-    border-radius: 20px 0 20px 0;
-    width: 25%;
-}
+
+/*Estilos do menu principal*/
 
 .menu-principal ul {
     background-color: var(--cor-primaria);
@@ -100,11 +112,5 @@ article {
 
 .menu-principal a {
     color: var(--cor-quaternaria);
-}
-
-section#artigos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    font-family: var(--fonte-secundaria);
 }
